@@ -6,12 +6,24 @@ import Skills from "../components/Skills.astro"
 import Projects from "../components/Projects.astro";
 import FormContact from "../components/FormContact.astro"
 import Footer from "../components/Footer.astro"
+import Warning from "../components/Warning.astro"
+import Header from "../components/Header.astro"
+
+const darkMode = false;
 ---
 <BaseLayout>
+  <Header darkMode={darkMode}/>
+  <Warning />
   <Hero/>
+  <Warning />
   <Description/>
+  <Warning />
   <Skills/>
+  <Warning />
   <Projects/>
+  <Warning />
   <FormContact />
+  <Warning />
   <Footer />
 </BaseLayout>
+
