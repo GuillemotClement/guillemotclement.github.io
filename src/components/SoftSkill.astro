@@ -1,0 +1,10 @@
+---
+import type { ISoft } from "./About.astro"
+const {soft} = Astro.props as { soft: ISoft}
+
+---
+
+<div class="border bg-neutral-800 text-white text-center py-3 px-5 rounded-xl shadow">
+  <i class={soft.logo}></i>
+  <h3 class="my-3">{soft.title}</h3>
+</div>

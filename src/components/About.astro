@@ -1,0 +1,50 @@
+---
+import profilPicture from '../assets/profil.jpeg';
+import SoftSkill from './SoftSkill.astro';
+
+export type ISoft = {
+  title: string;
+  logo: string;
+}
+
+const softSkill: ISoft[] = [
+  {
+    title: "Communication",
+    logo: "fa-solid fa-comments"
+  },
+  {
+    title: "Capacite d'adaptation",
+    logo: "fa-solid fa-rotate"
+  },
+  {
+    title: "Autonomie",
+    logo: "fa-solid fa-user-gear"
+  }
+]
+
+
+---
+<div class="container mx-auto h-screen flex flex-col justify-center" id="about">
+  <div class="">
+    <h2 class="text-center text-xl uppercase text-blue-500">A propos de moi</h2>
+    <div class="flex items-center">
+      <div class="">
+        <div class="my-5">
+          <img src={profilPicture.src} alt="hero" width={profilPicture.width} height={profilPicture.height} class="rounded-md">
+        </div>
+      </div>
+      <div class="flex flex-col items-center justify-between flex-1">
+        <div class="flex justify-center gap-x-10">
+          {softSkill.map((soft: ISoft) => <SoftSkill soft={soft}/>)}
+        </div>
+        <div class="w-150 text-center my-10 flex flex-col gap-y-10">
+          <p>Passione par le developpement depuis plus de 5 and, je cree des applications web moderne et performantes</p>
+          <p>Je suis specialise dans le developpement d'application web avec une specialisation particuliere en Angular et Go. Mon approche combine creativite et rigueur techniques pour livrer des projets aui repondent parfaitement aux besoins des utilisateurs</p>
+          <p>Toujours a l'affut des derniere technologies et methodologies, j'aime relever de nouveaux defis et trouver des solutions innovantes aux probleme complexes.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
